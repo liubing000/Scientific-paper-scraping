@@ -126,7 +126,7 @@ txt_csv(filename,csvname)
 # 需要根据doi url获得关键字、摘要文本
 
 df = pd.read_csv('all_data.csv')
-for i in range(0,3417):   
+for i in range(df.shape[0):   
     df['doi'][i] = 'https://doi.org/10.1073/pnas.' + df.iloc[i]['base_infor'].split('pnas.')[1].split('\n')[0].replace(' ','')
 # 删除重复行
 df = df.drop_duplicates(['doi'],keep='first')
